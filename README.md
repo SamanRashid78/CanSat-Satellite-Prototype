@@ -8,3 +8,4 @@ A custom-built Python-based GUI application processes, visualizes, and logs the 
 The hardware was calibrated under varying conditions such as changes in altitude and velocity to ensure measurement accuracy and system reliability. 
 The CanSat was successfully launched, demonstrating stable communication, efficient data transmission, and precise tracking of landing coordinates, reflecting a complete end-to-end implementation of an embedded telemetry system.
 lalalallalal
+jhkhdkjfshsk
