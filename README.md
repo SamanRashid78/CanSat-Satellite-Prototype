@@ -1,9 +1,63 @@
-# CanSat-Satellite-Prototype.
-CanSat Satellite Prototype – SUPARCO Space Camp 2026: 
-This project involves the design and development of a CanSat (can-sized satellite) based on the ESP32 architecture, integrating multiple subsystems for real-time environmental monitoring and data acquisition. 
-The system collects sensor data from onboard modules including a camera for imaging, an accelerometer and gyroscope for motion sensing, a pressure sensor for atmospheric readings, and a GPS module for location tracking and altitude estimation. 
-Data is acquired at optimized sampling rates, accurately timestamped, and packetized before being wirelessly transmitted from the CanSat to the ground station. 
-The ground station, also powered by ESP32, receives the data packets and forwards them to a PC via a serial (COM) port. 
-A custom-built Python-based GUI application processes, visualizes, and logs the incoming telemetry data in real time, enabling effective monitoring and analysis.
-The hardware was calibrated under varying conditions such as changes in altitude and velocity to ensure measurement accuracy and system reliability. 
-The CanSat was successfully launched, demonstrating stable communication, efficient data transmission, and precise tracking of landing coordinates, reflecting a complete end-to-end implementation of an embedded telemetry system.
+# CanSat Satellite Prototype — SUPARCO Space Camp 2026
+
+> **SUPARCO Space Camp Karachi · February 2026**
+> Team project built and launched at the SUPARCO-organised aerospace camp, Karachi.
+
+A functional can-sized satellite prototype built on ESP32, designed to collect and transmit real-time environmental telemetry during flight. The CanSat was successfully launched and recovered — actual flight data is included in this repo.
+
+---
+
+## What It Does
+
+The CanSat reads altitude, temperature, and pressure during flight using onboard sensors, logs everything to an SD card, and transmits wirelessly to a ground station in real time. On recovery, the logged CSV contains the complete flight record.
+
+---
+
+## Hardware
+
+| Component | Role |
+|---|---|
+| ESP32 | Main microcontroller + wireless telemetry |
+| BMP280 / barometer | Altitude and pressure sensing |
+| DHT sensor | Temperature and humidity |
+| SD card module | Onboard data logging |
+| Parachute system | Recovery mechanism |
+
+---
+
+## Flight Data
+
+`cansat_log_20260211_131525.csv` contains real telemetry logged during the test flight on 11 February 2026. Each row is a timestamped sensor reading captured during ascent and descent.
+
+**This is real flight data — not simulated.**
+
+---
+
+## Files
+
+```
+CanSat-Satellite-Prototype/
+├── cansat_log_20260211_131525.csv        ← actual telemetry from test flight
+├── Test-Flight-of-Cansat.jpeg            ← photo from launch day
+├── CanSat-Prototype-Report.pdf           ← full project report
+└── README.md
+```
+
+---
+
+## Mission Results
+
+- Successful launch and stable ascent recorded
+- Real-time telemetry streamed to ground station during flight
+- Parachute recovery executed successfully
+- Full sensor log captured across complete flight duration
+
+---
+
+## What I Learned
+
+- Embedded systems under real mission constraints — weight, power, size all matter
+- Sensor fusion and onboard logging during dynamic flight conditions
+- Wireless telemetry and ground station communication
+- Subsystem integration and hardware debugging in field conditions without a lab
+- Working under time pressure in a team with a real launch deadline
