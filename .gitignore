@@ -1,0 +1,23 @@
+# MicroPython compiled bytecode
+*.mpy
+
+# ESP-IDF / PlatformIO build output
+.pio/
+.pioenvs/
+build/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Thonny / MicroPython IDE
+*.thonny
+
+# Large raw log files (keep the final CSV, ignore test runs)
+*_raw.csv
+test_logs/
+
+# Windows
+Thumbs.db
+Desktop.ini
